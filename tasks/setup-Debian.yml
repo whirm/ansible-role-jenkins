@@ -18,7 +18,7 @@
 - name: Download specific Jenkins version.
   get_url:
     url: "{{ jenkins_pkg_url }}/jenkins_{{ jenkins_version }}_all.deb"
-    dest: "/tmp/jenkins.deb"
+    dest: "/tmp/jenkins_{{ jenkins_version }}.deb"
   when: jenkins_version is defined
 
 - name: Check if we downloaded a specific version of Jenkins.
